@@ -95,7 +95,7 @@ namespace Marten.Schema
             var membersLocator = _members
                 .Select(m =>
                 {
-                    var sql = _mapping.FieldFor(m).SqlLocator.Replace("d.", "");
+                    var sql = _mapping.FieldFor(m).TypedLocator.Replace("d.", "");
                     switch (Casing)
                     {
                         case Casings.Upper:
